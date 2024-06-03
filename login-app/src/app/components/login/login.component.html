@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="row bg-light d-flex align-items-center " style="height: 400px;">
+      <form>
+      <div class="col-4 mt-5 mx-auto h-75">
+       <h2 class="text-left mb-2">Login</h2> 
+       <div class="row mb-2">
+       <label class="col-12 fs-6 mb-2">Username</label>
+       <input type="textbox" class="form-control rounded-1 mb-2" style="margin-left: 0.75rem;width: 350px;" placeholder="enter username"([ngModel])=>
+       <label class="col-12 fs-6 mb-2">Password</label>
+       <input type="textbox" class="form-control rounded-1 mb-2" style="margin-left: 0.75rem;width: 350px;"  placeholder="enter password">
+       </div>
+       <div class="row" style="margin-left: 0.01rem;">
+       <button class="w-25 me-2 btn btn-primary" (click)="loginDashboard()">Login</button>
+       <button class="w-25 btn btn-light text-primary" (click)="showRegister()">Register</button>
+      </div>
+      </div>
+    </form>
+    </div>
+    <div class="row d-flex flex-column mt-4 text-center">
+      <p class="text-primary fs-6 ">Angular 16 - User Registration and Login Example</p>
+      <p class="text-primary fs-6 ">RekhaAngular.com</p>
+    </div>
+  </div>
