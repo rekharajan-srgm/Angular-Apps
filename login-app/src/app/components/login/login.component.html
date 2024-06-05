@@ -5,9 +5,9 @@
        <h2 class="text-left mb-2">Login</h2> 
        <div class="row mb-2">
        <label class="col-12 fs-6 mb-2">Username</label>
-       <input type="textbox" class="form-control rounded-1 mb-2" style="margin-left: 0.75rem;width: 350px;" placeholder="enter username"([ngModel])=>
+       <input type="textbox" class="form-control rounded-1 mb-2" style="margin-left: 0.75rem;width: 350px;" placeholder="enter username" [(ngModel)]="this.uname" name="userName">
        <label class="col-12 fs-6 mb-2">Password</label>
-       <input type="textbox" class="form-control rounded-1 mb-2" style="margin-left: 0.75rem;width: 350px;"  placeholder="enter password">
+       <input type="textbox" class="form-control rounded-1 mb-2" style="margin-left: 0.75rem;width: 350px;"  placeholder="enter password" [(ngModel)]="this.psword" name="password">
        </div>
        <div class="row" style="margin-left: 0.01rem;">
        <button class="w-25 me-2 btn btn-primary" (click)="loginDashboard()">Login</button>

@@ -24,6 +24,14 @@ export class RegisterComponent {
     console.log("register is done!");
     this.model=new User(this.fn,this.ln,this.un,this.pswd);
     console.log(this.model);
+    localStorage.setItem('fn',this.fn);
+    localStorage.setItem("ln",this.ln);
+    localStorage.setItem('un',this.un);
+    localStorage.setItem("pswd",this.pswd);
+    console.log(localStorage.getItem('fn'));
+    console.log(localStorage.getItem('ln'));
+    console.log(localStorage.getItem('un'));
+    console.log(localStorage.getItem('pswd'));
   }
 
 }
