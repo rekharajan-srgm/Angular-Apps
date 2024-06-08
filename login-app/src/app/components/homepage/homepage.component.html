@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row bg-light d-flex align-items-center " style="height: 550px;">
+      <form>
+      <div class="col-4 mt-5 mx-auto h-75">
+       <h2 class="text-left mb-2">Licence Register Form</h2> 
+       <div class=" form-group row mb-2">
+       <label class="col-12 fs-6 mb-2">Name</label>
+       <input type="textbox" class="form-control rounded-1 mb-2" style="margin-left: 0.75rem;width: 350px;" placeholder="enter firstname" [(ngModel)]="this.name" name="firstName">
+       <label class="col-12 fs-6 mb-2">age</label>
+       <input type="textbox" class="form-control rounded-1 mb-2" style="margin-left: 0.75rem;width: 350px;"  placeholder="enter lastword" [(ngModel)]="this.age" name="lastName">
+       <label class="col-12 fs-6 mb-2">Gender</label>
+       <label class="col-12 fs-6 mb-2">Already have Licence?</label>
+       <!-- radiobutton
+       select country
+       date of application
+       choose a photo file -->
+       </div>
+       <div class="form-group row" style="margin-left: 0.01rem;">
+       <button (click)="regLicence()" class="w-25 me-2 btn btn-primary">Register</button>
+       <button (click)="cancelForm()" class="w-25 btn btn-light text-primary">Cancel</button>
+      </div>
+      </div>
+    </form>
+    </div>
+    <div class="row d-flex flex-column mt-4 text-center">
+      <p class="text-primary fs-6 ">Angular 16 - User Registration and Login Example</p>
+      <p class="text-primary fs-6 ">RekhaAngular.com</p>
+    </div>
+  </div>

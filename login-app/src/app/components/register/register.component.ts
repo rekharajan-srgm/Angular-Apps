@@ -32,6 +32,7 @@ export class RegisterComponent {
     console.log(localStorage.getItem('ln'));
     console.log(localStorage.getItem('un'));
     console.log(localStorage.getItem('pswd'));
+    this.router.navigate(['/login']);
   }
 
 }

@@ -25,8 +25,9 @@ export class LoginComponent {
     const pswd1=localStorage.getItem("psword");
     const pswd2=localStorage.getItem("pswd");
     if(value1===value2 && pswd1===pswd2){
-      this.router.navigate(['/register']);
+      this.router.navigate(['/homepage']);
     }
+    
   }
  
 }
