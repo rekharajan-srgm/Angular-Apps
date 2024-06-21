@@ -4,14 +4,46 @@
       <div class="col-4 mt-5 mx-auto h-75">
        <h2 class="text-left mb-2">Licence Register Form</h2> 
        <div class=" form-group row mb-2">
-       <label class="col-12 fs-6 mb-2">Name</label>
-       <input type="textbox" class="form-control rounded-1 mb-2" style="margin-left: 0.75rem;width: 350px;" placeholder="enter firstname" [(ngModel)]="this.name" name="firstName">
-       <label class="col-12 fs-6 mb-2">age</label>
-       <input type="textbox" class="form-control rounded-1 mb-2" style="margin-left: 0.75rem;width: 350px;"  placeholder="enter lastword" [(ngModel)]="this.age" name="lastName">
-       <label class="col-12 fs-6 mb-2">Gender</label>
-       <label class="col-12 fs-6 mb-2">Already have Licence?</label>
-       <!-- radiobutton
-       select country
+        <div class="d-flex col-12 mb-2">
+       <label class="fs-6 col-2 text-left">Name</label>
+       <input type="textbox" class="form-control rounded-1" style="width: 350px;" placeholder="enter firstname" [(ngModel)]="this.name" name="firstName"></div>
+       <div class="d-flex col-12 mb-2">
+       <label class="fs-6 col-2 text-left">age</label>
+       <input type="textbox" class="form-control rounded-1" style="width: 350px;"  placeholder="enter lastword" [(ngModel)]="this.age" name="lastName"></div>
+       <div [formGroup]="licForm" class="d-flex col-12 fs-6 mb-2">
+       <label class="col-2">Gender</label>
+       <div class="d-flex">
+       <div class="me-1">
+       <input type="radio" formControlName="gender" value="male">Male
+       </div>
+       
+       <div class="me-1">
+       <input type="radio" formControlName="gender" value="female">Female
+       </div></div>
+       </div>
+       <div [formGroup]="isLicenceForm" class="d-flex  col-12 fs-6 mb-2">
+        <div class="col-12">
+          <div>
+       <label class="col-2">Already have Licence?</label></div>
+       <div>
+       <div class="me-1">
+        <input type="radio" formControlName="isLicence" value="yes">Yes
+        </div>
+        
+        <div class="me-1">
+        <input type="radio" formControlName="isLicence" value="no">No
+        </div>
+        </div>
+        </div>
+        <div class="col-12">
+          <label>Select country</label>
+        <select formControlName="country" class="form-control">
+          <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+
+        </select>
+        </div>
+      </div>
+       <!--
        date of application
        choose a photo file -->
        </div>
