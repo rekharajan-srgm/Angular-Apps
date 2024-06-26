@@ -21,7 +21,7 @@ export class HomepageComponent {
     });
     this.isLicenceForm = this.fb.group({
       isLicence: ['yes'],//default value
-      country: ['']
+      country: ["select one country"]
     })
   }
   ngOnInit() {
@@ -33,7 +33,7 @@ export class HomepageComponent {
 
   getCountryList(){
       console.log('calling http');
-    this.http.get<CountryResponse>('https://run.mocky.io/v3/cf4b2506-2b59-4114-b59f-f60a9d14aac0')
+    this.http.get<CountryResponse>('http://localhost:3000/country/list')
       .subscribe(data => {
           console.log(data);
           this.countries = data.countries;
