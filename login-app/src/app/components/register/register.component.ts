@@ -1,6 +1,7 @@
 import { Component} from '@angular/core';
 import {Router} from '@angular/router';
 import{User} from '../../../app/user';
+// import {BackendApiService} from ''
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -32,6 +33,7 @@ export class RegisterComponent {
     console.log(localStorage.getItem('ln'));
     console.log(localStorage.getItem('un'));
     console.log(localStorage.getItem('pswd'));
+
     this.router.navigate(['/login']);
   }
 
