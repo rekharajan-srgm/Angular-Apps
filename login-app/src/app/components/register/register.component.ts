@@ -1,6 +1,9 @@
 import { Component} from '@angular/core';
 import {Router} from '@angular/router';
 import{User} from '../../../app/user';
+import {UserService} from '../../service/user.service';
+import { response } from 'express';
+import { HttpClient } from '@angular/common/http';
 // import {BackendApiService} from ''
 @Component({
   selector: 'app-register',
@@ -8,7 +11,7 @@ import{User} from '../../../app/user';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-  constructor(private router:Router){
+  constructor(private router:Router,public apiService:UserService,private http: HttpClient){
     
   }
   fn:string="";
@@ -33,7 +36,7 @@ export class RegisterComponent {
     console.log(localStorage.getItem('ln'));
     console.log(localStorage.getItem('un'));
     console.log(localStorage.getItem('pswd'));
-
+    this.apiService.regUser(this.model);
     this.router.navigate(['/login']);
   }
 
